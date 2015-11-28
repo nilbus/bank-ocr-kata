@@ -2,6 +2,7 @@ import assert from 'assert';
 
 function inputExample(input) {
   let example = withoutLeadingNewline(input);
+  console.log('example:\n', example);
   assertLineMultiple(4, example);
   return example;
 }
