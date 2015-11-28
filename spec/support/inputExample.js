@@ -1,4 +1,4 @@
-import assert from 'assert'
+import assert from 'assert';
 
 function inputExample(input) {
   let example = withoutLeadingNewline(input);
