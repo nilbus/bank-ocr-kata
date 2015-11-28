@@ -13,7 +13,10 @@ describe('User Story 1:', function () {
     describe('toString', function () {
       it('reutrns a string representing the account number', function () {
         const scannedAccount = new ScannedAccount(validAccount);
-        expect(scannedAccount.toString()).toEqual('123456789');
+
+        const result = scannedAccount.toString();
+
+        expect(result).toEqual('123456789');
       });
     });
   });

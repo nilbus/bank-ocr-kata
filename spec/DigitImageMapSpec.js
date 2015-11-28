@@ -25,12 +25,18 @@ describe('User Story 1:', function () {
     describe('toString', function () {
       it('reutrns the matching numeral character', function () {
         const digitImageMap = new DigitImageMap(exampleDigit);
-        expect(digitImageMap.toString()).toEqual('1');
+
+        const result = digitImageMap.toString();
+
+        expect(result).toEqual('1');
       });
 
       it('reutrns "?" if no digit matches', function () {
         const digitImageMap = new DigitImageMap(exampleGarbage);
-        expect(digitImageMap.toString()).toEqual('?');
+
+        const result = digitImageMap.toString();
+
+        expect(result).toEqual('?');
       });
     });
 
@@ -38,7 +44,18 @@ describe('User Story 1:', function () {
       it('compares instances for value equality', function () {
         const example   = new DigitImageMap(exampleDigit);
         const duplicate = new DigitImageMap(duplicateDigit);
-        expect(example.is(duplicate)).toBeTruthy();
+
+        const areEqual = example.is(duplicate);
+
+        expect(areEqual).toBeTruthy();
+      });
+
+      it('is comparable with DigitPattern instances', function () {
+        const two = DigitPattern.get(2);
+
+        const areEqual = two.digitImageMap.is(two);
+
+        expect(areEqual).toBeTruthy();
       });
     });
   });

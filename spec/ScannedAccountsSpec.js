@@ -17,7 +17,10 @@ describe('User Story 1:', function () {
     describe('accountNumbers', function () {
       it('reutrns an array of account numbers corresponding to scan data', function () {
         const scannedAccounts = new ScannedAccounts(twoValidAccounts);
-        expect(scannedAccounts.accountNumbers()).toEqual(['123456789', '111111111']);
+
+        const result = scannedAccounts.accountNumbers()
+
+        expect(result).toEqual(['123456789', '111111111']);
       });
     });
   });
