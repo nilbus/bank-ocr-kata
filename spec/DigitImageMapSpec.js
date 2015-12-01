@@ -22,9 +22,11 @@ describe('User Story 1:', function () {
 `);
 
   describe('DigitImageMap', function () {
+
     describe('toString', function () {
       it('reutrns the matching numeral character', function () {
-        const digitImageMap = new DigitImageMap(exampleDigit);
+        const searchDigitPatterns = () => 1;
+        const digitImageMap = new DigitImageMap(exampleDigit, searchDigitPatterns);
 
         const result = digitImageMap.toString();
 
